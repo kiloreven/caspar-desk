@@ -1,0 +1,58 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <style>
+        body, html {
+            margin: 0;
+            overflow: hidden;
+        }
+        </style>
+    </head>
+
+    <body>
+    
+    
+        {#    <img src={% static 'ipp24_super_utksat2.svg' %}> #}
+        {% include 'desk/pp24_super_utksat2.svg' %}
+
+    <script>
+        var start_super = function() { 
+            $("#svg9239").fadeIn(700);
+        }
+        var end_super = function() { 
+            $("#svg9239").fadeOut(700);
+        }
+
+        $('#tspan4252-4').text('text1')
+        var ws = new WebSocket('ws://192.168.1.9:8080/ws/foobar?subscribe-broadcast&publish-broadcast&echo');
+        ws.onopen = function() {
+                console.log("websocket connected");
+        };
+        ws.onmessage = function(e) {
+                console.log("Received: " + e.data);
+                j = JSON.parse(e.data);
+
+                $('#tspan4252-4').text(j.field1);
+                $('#tspan4256-8').text(j.field2);
+                start_super();
+                setTimeout(end_super, 5000);
+
+
+        };
+        ws.onerror = function(e) {
+                console.error(e);
+        };
+        ws.onclose = function(e) {
+                console.log("connection closed");
+        }
+        function send_message(msg) {
+                ws.send(msg);
+        }
+
+
+
+    </script>
+    </body>
+</html>

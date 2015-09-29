@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <style>
+        body, html {
+            margin: 0;
+            overflow: hidden;
+        }
+        </style>
+    </head>
+
+    <body>
+    
+    <form method='post' target="{% url 'pp24_admin' %}" id='pp24'>
+        {% csrf_token %}
+        <input type='text' id='field1' name='test1'>
+        <input type='text' id='field2' name='test2'>
+        <button action='submit'>Fire!</button>
+    </form>
+
+    </body>
+</html>
