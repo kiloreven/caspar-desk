@@ -1,6 +1,6 @@
 from settings_base import *
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'QGHP8h328gp9h2qoigøh1jæøi2qjhrjoiwhaøoishfø3fewq''
+SECRET_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
