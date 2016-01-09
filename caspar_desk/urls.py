@@ -20,5 +20,6 @@ import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^pp24_admin/', views.pp24_admin, name='pp24_admin'),
+    url(r'^tlk_admin/', views.tlk_admin, name='tlk_admin'),
     url(r'^test/', views.test),
 ]
