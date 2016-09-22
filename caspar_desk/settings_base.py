@@ -19,9 +19,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&*b)8=u&5j^1bcin_s(ry5k$zx_u!x8r#8*r!!v@m2gfn2=o4e'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -121,3 +118,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Give me proper shell
+SHELL_PLUS = "ipython"
