@@ -1,4 +1,10 @@
 caspar_desk/settings.py
 caspar_desk/settings.pyc
+db.sqlite3
 .old
 *.pyc
+*.swp
+*.swo
+*.swn
+*.swm
+*.swl
